@@ -4,7 +4,7 @@ This app is tarantool based [TodoMVC](https://github.com/tastejs/todomvc).
 
 # How it works
 
-> App use [tarantool](https://github.com/tarantool/tarantool platform as database and an application server. Front-end part
+> App use [tarantool](https://github.com/tarantool/tarantool) platform as database and an application server. Front-end part
 of app made with [leptos](https://github.com/leptos-rs/leptos) framework with [axum](https://github.com/tokio-rs/axum) integration.
 
 # Preparation
