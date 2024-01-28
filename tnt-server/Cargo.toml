@@ -1,0 +1,27 @@
+[package]
+name = "tnt-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+front-app = { path = "../front-app", default-features = false, features = ["ssr"] }
+tarantool = { version = "4.0", features = ["test"] }
+tarantool-test = "0.1.0"
+strum = "0.25"
+strum_macros = "0.25"
+axum = { workspace = true }
+tokio = { version = "1.35.1", features = ["rt-multi-thread"] }
+leptos = { workspace = true, features = [ "ssr" ] }
+leptos_axum.workspace = true
+serde = "1.0.195"
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+test = []
+
+[package.metadata.leptos]
+name = "tarantool-leptos"
+output-name = "tarantool-leptos"
+bin-package = "test-bin"

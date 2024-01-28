@@ -1,0 +1,22 @@
+[workspace]
+members = ["tnt-server", "front-app", "front-wasm" ]
+resolver = "2"
+
+[workspace.dependencies]
+axum = { version = "0.6.4", features = ["macros"] }
+leptos = { version = "0.5" }
+leptos_meta = { version = "0.5" }
+leptos_router = { version = "0.5" }
+leptos_dom = { version = "0.5" }
+leptos_axum = "0.5.7"
+
+[profile.release.package.front-wasm]
+codegen-units = 1
+opt-level = 'z'
+
+[[workspace.metadata.leptos]]
+# project name
+name = "tarantool-leptos"
+output-name = "tarantool-leptos"
+lib-package = "front-wasm"
+site-addr = "127.0.0.1:3000"
